@@ -6,8 +6,6 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-//huhu arne
-//hallo dennis
 public class GameManager : MonoBehaviour {
 
     public bool gameStarted;
@@ -15,7 +13,6 @@ public class GameManager : MonoBehaviour {
 
     public Text scoreText;
     public Text highscoreText;
-	//Was gehhhhht
 
     private void Awake()
     {
