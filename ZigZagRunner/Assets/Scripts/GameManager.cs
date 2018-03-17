@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour {
 
     public Text scoreText;
     public Text highscoreText;
-
+	//Was gehhhhht
 
     private void Awake()
     {
