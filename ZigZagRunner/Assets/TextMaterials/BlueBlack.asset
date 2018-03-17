@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 2108210716, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
-  m_Name: New TMP Color Gradient
+  m_Name: BlueBlack
   m_EditorClassIdentifier: 
-  topLeft: {r: 1, g: 1, b: 1, a: 1}
+  topLeft: {r: 0, g: 0.0068967342, b: 1, a: 1}
   topRight: {r: 1, g: 1, b: 1, a: 1}
   bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-  bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  bottomRight: {r: 0, g: 0.007843138, b: 1, a: 1}
