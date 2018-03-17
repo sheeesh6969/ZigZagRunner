@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-
+//hallo dennis
 public class GameManager : MonoBehaviour {
 
     public bool gameStarted;
