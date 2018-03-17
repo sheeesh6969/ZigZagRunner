@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour {
 
     public bool gameStarted;
     public int score;
-    public int crystalScore;
 
     public Text scoreText;
     public Text highscoreText;
@@ -59,9 +58,9 @@ public class GameManager : MonoBehaviour {
         }
     }
     
-    public void IncreaseScore()
+	public void IncreaseScore(int value)
     {
-        score += crystalScore;
+        score += value;
         scoreText.text = score.ToString();
 
         if (score > GetHighScore())

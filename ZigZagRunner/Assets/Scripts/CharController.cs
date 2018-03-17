@@ -80,7 +80,7 @@ public class CharController : MonoBehaviour {
     {
         if(other.tag == "Crystal")
         {
-            gameManager.IncreaseScore();
+            gameManager.IncreaseScore(4);
 
             //Spawn Crystal effect
             GameObject g = Instantiate(crystalEffect, other.transform.position, Quaternion.identity);
