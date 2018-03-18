@@ -13,6 +13,7 @@ public class CharController : MonoBehaviour {
     private bool walkingRight = true;
     private Animator anim;
     private GameManager gameManager;
+    private int level = 1;
 
     private void Awake()
     {
@@ -64,7 +65,7 @@ public class CharController : MonoBehaviour {
 
     private void LevelUp()
     {
-        Instantiate(levelUpEffect);
+        Instantiate(levelUpEffect, transform.position, Quaternion.identity);
         
     }
 
@@ -86,6 +87,10 @@ public class CharController : MonoBehaviour {
         if(other.tag == "Crystal")
         {
             gameManager.IncreaseScore(4);
+            if (gameManager.score >= 100 && level == 1)
+            {
+
+            } 
 
             //Spawn Crystal effect
             GameObject g = Instantiate(crystalEffect, other.transform.position, Quaternion.identity);
