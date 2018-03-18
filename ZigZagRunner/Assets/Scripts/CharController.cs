@@ -87,10 +87,9 @@ public class CharController : MonoBehaviour {
         if(other.tag == "Crystal")
         {
             gameManager.IncreaseScore(4);
-            //levelupeffekt
             if (gameManager.score >= 100 && level == 1)
             {
-                Instantiate(levelUpEffect, transform.position, Quaternion.identity);
+
             } 
 
             //Spawn Crystal effect
