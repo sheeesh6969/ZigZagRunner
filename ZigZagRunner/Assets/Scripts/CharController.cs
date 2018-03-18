@@ -88,9 +88,14 @@ public class CharController : MonoBehaviour {
         {
             gameManager.IncreaseScore(4);
             //levelupeffekt
-            if (gameManager.score >= 100 && level == 1)
+            if (gameManager.score >= 10 && level == 1)
             {
-                Instantiate(levelUpEffect, transform.position, Quaternion.identity);
+                Vector3 v3 = transform.position;
+                v3.y += 1.0f;
+
+                GameObject lvlupeffect = Instantiate(levelUpEffect, v3, Quaternion.identity);
+                Destroy(lvlupeffect, 0.5f);
+                level += 1;
             } 
 
             //Spawn Crystal effect
