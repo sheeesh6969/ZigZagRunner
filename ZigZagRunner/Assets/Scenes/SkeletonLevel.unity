@@ -1900,7 +1900,7 @@ MonoBehaviour:
   score: 0
   scoreText: {fileID: 1532224844}
   highscoreText: {fileID: 1067913983}
-  levelText: {fileID: 0}
+  levelText: {fileID: 1816884782}
 --- !u!4 &1554167367
 Transform:
   m_ObjectHideFlags: 0
