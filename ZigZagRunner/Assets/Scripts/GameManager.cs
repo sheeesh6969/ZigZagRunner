@@ -78,6 +78,6 @@ public class GameManager : MonoBehaviour {
 
 	public void setCharacterLevel(int level)
 	{
-		levelText.text = level.ToString ();
+		levelText.text = "Du bist Level: " + level.ToString ();
 	}
 }

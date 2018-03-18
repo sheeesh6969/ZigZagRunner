@@ -21,6 +21,7 @@ public class CharController : MonoBehaviour {
         anim = GetComponent<Animator>();
 		levelUpSystem = GetComponent<LevelUpSystem>();
         gameManager = FindObjectOfType<GameManager>();
+		gameManager.setCharacterLevel (levelUpSystem.getCurrentLevel());
     }
 
     void FixedUpdate () {
