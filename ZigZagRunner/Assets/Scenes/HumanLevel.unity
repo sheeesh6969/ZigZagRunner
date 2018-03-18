@@ -1132,7 +1132,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameStarted: 0
   score: 0
-  crystalScore: 3
   scoreText: {fileID: 1593923052}
   highscoreText: {fileID: 784426071}
 --- !u!4 &799300310
@@ -1569,17 +1568,17 @@ Prefab:
     - target: {fileID: 224296799409163618, guid: 8debd648a8d0bb1498a1d5ba358054ba,
         type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224296799409163618, guid: 8debd648a8d0bb1498a1d5ba358054ba,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 58.554447
+      value: 58.554443
       objectReference: {fileID: 0}
     - target: {fileID: 224296799409163618, guid: 8debd648a8d0bb1498a1d5ba358054ba,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 10.978962
+      value: 10.978973
       objectReference: {fileID: 0}
     - target: {fileID: 224296799409163618, guid: 8debd648a8d0bb1498a1d5ba358054ba,
         type: 2}
@@ -2004,6 +2003,12 @@ Prefab:
       propertyPath: destroyEffect
       value: 
       objectReference: {fileID: 1499472975598566, guid: b374abf81901ead439c762120425bc8e,
+        type: 2}
+    - target: {fileID: 114086132718699296, guid: 60439977d79ea1146a3e925b321049fd,
+        type: 2}
+      propertyPath: levelUpEffect
+      value: 
+      objectReference: {fileID: 1499472975598566, guid: 0a0ce6a1bb6f32c47aae0ad2fd329a7a,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60439977d79ea1146a3e925b321049fd, type: 2}

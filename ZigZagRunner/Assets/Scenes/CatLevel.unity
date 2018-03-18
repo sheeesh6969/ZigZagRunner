@@ -1547,7 +1547,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameStarted: 0
   score: 0
-  crystalScore: 3
   scoreText: {fileID: 1590310626}
   highscoreText: {fileID: 1081484734}
 --- !u!4 &1100661997
@@ -1701,6 +1700,12 @@ Prefab:
       propertyPath: destroyEffect
       value: 
       objectReference: {fileID: 1499472975598566, guid: 86e373388467f6747b154b96855d13de,
+        type: 2}
+    - target: {fileID: 114143633739445578, guid: fc99e1cf369e15742b2763b24e85554c,
+        type: 2}
+      propertyPath: levelUpEffect
+      value: 
+      objectReference: {fileID: 1499472975598566, guid: 0a0ce6a1bb6f32c47aae0ad2fd329a7a,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc99e1cf369e15742b2763b24e85554c, type: 2}
