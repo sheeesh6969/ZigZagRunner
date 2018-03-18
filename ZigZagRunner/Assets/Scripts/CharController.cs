@@ -94,7 +94,7 @@ public class CharController : MonoBehaviour {
                 v3.y += 1.0f;
 
                 GameObject lvlupeffect = Instantiate(levelUpEffect, v3, Quaternion.identity);
-                Destroy(lvlupeffect, 0.5f);
+                Destroy(lvlupeffect, 2.0f);
                 level += 1;
             } 
 
