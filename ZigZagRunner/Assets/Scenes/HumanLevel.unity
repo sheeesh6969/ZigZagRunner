@@ -2008,7 +2008,7 @@ Prefab:
         type: 2}
       propertyPath: levelUpEffect
       value: 
-      objectReference: {fileID: 1499472975598566, guid: 0a0ce6a1bb6f32c47aae0ad2fd329a7a,
+      objectReference: {fileID: 1499472975598566, guid: db101de8119347143969286da3d1cd1f,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60439977d79ea1146a3e925b321049fd, type: 2}
