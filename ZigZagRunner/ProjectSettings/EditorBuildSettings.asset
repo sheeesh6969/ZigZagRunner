@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SkeletonLevel.unity
     guid: d4c9a9d57399d52488ec741a2e7a7802
+  - enabled: 1
+    path: Assets/Scenes/EntwicklerSite.unity
+    guid: 8bff7d0b3397f4947bd496c751562e85
