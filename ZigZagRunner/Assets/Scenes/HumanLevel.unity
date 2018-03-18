@@ -1347,6 +1347,25 @@ Transform:
   m_PrefabParentObject: {fileID: 4330455525331218, guid: fedbead93d5ffa043bb696303dd6eab7,
     type: 2}
   m_PrefabInternal: {fileID: 925235152}
+--- !u!1 &996806574 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1759413705453316, guid: 60439977d79ea1146a3e925b321049fd,
+    type: 2}
+  m_PrefabInternal: {fileID: 2144068918}
+--- !u!114 &996806575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 996806574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab6c5be06376c1640b8266841b08a622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startLevel: 0
+  maxLevel: 20
+  maxEp: 1000
 --- !u!1 &1030668814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,7 +1597,7 @@ Prefab:
     - target: {fileID: 224296799409163618, guid: 8debd648a8d0bb1498a1d5ba358054ba,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 10.978973
+      value: 10.979004
       objectReference: {fileID: 0}
     - target: {fileID: 224296799409163618, guid: 8debd648a8d0bb1498a1d5ba358054ba,
         type: 2}
