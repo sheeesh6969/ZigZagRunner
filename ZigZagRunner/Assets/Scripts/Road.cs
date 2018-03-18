@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//GayLord
+
 public class Road : MonoBehaviour {
 
     public GameObject roadPrefab;
@@ -17,8 +17,6 @@ public class Road : MonoBehaviour {
 
     public void CreateNewRoadPart()
     {
-        Debug.Log("Create new Road Part");
-
         Vector3 spawnPos = Vector3.zero;
 
         float chance = Random.Range(0, 100);

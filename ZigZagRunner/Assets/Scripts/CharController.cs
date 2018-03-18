@@ -13,13 +13,13 @@ public class CharController : MonoBehaviour {
     private bool walkingRight = true;
     private Animator anim;
     private GameManager gameManager;
-    private int level = 1;
+	private LevelUpSystem levelUpSystem;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-
+		levelUpSystem = GetComponent<LevelUpSystem>();
         gameManager = FindObjectOfType<GameManager>();
     }
 
@@ -63,12 +63,6 @@ public class CharController : MonoBehaviour {
             gameManager.EndGame();
     }
 
-    private void LevelUp()
-    {
-        Instantiate(levelUpEffect, transform.position, Quaternion.identity);
-        
-    }
-
     private void Switch()
     {
         if(!gameManager.gameStarted)
@@ -86,17 +80,23 @@ public class CharController : MonoBehaviour {
     {
         if(other.tag == "Crystal")
         {
+			//increase Score
             gameManager.IncreaseScore(4);
-            //levelupeffekt
-            if (gameManager.score >= 10 && level == 1)
-            {
-                Vector3 v3 = transform.position;
-                v3.y += 1.0f;
 
-                GameObject lvlupeffect = Instantiate(levelUpEffect, v3, Quaternion.identity);
-                Destroy(lvlupeffect, 2.0f);
-                level += 1;
-            } 
+			//simple levelUpSystem: add ep
+			bool islevelUp = levelUpSystem.addEp(4);
+
+			//if level up
+			if (islevelUp) {
+				//play effect
+				execLevelUpEffekt ();
+
+				//debug output for current level.
+				//TODO add a ui element to display the current level
+				//gameManager.increaseEp
+				Debug.Log (levelUpSystem.getCurrentLevel());
+			
+			}
 
             //Spawn Crystal effect
             GameObject g = Instantiate(crystalEffect, other.transform.position, Quaternion.identity);
@@ -123,5 +123,13 @@ public class CharController : MonoBehaviour {
     {
         return transform.position.y < 0.40f;
     }
+
+	private void execLevelUpEffekt ()
+	{
+		Vector3 v3 = transform.position;
+		v3.y += 1.0f;
+		GameObject lvlupeffect = Instantiate(levelUpEffect, v3, Quaternion.identity);
+		Destroy(lvlupeffect, 2.0f);
+	}
 
 }
