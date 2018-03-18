@@ -74,4 +74,9 @@ public class GameManager : MonoBehaviour {
         int i = PlayerPrefs.GetInt("Highscore");
         return i;
     }
+
+	public void setCharacterLevel(int level)
+	{
+
+	}
 }
