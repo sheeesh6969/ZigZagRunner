@@ -34,8 +34,10 @@ public class Road : MonoBehaviour {
         //Enable the Crystal for every 5th road part
         roadCount++;
 
-        if (roadCount % 4 == 0)
-            g.transform.GetChild(0).gameObject.SetActive(true);
+		if (roadCount % 4 == 0) {
+			g.transform.GetChild (0).gameObject.SetActive (true);
+			//g.transform.GetChild (0).gameObject.GetComponent<Crystal> ();
+		}
     }
 
 }
