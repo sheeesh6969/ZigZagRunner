@@ -6,6 +6,7 @@ public class CharController : MonoBehaviour {
 
     public Transform rayStart;
     public GameObject crystalEffect;
+    public GameObject levelUpEffect;
     public GameObject destroyEffect;
     public int runSpeed;
     private Rigidbody rb;
@@ -61,7 +62,11 @@ public class CharController : MonoBehaviour {
             gameManager.EndGame();
     }
 
-
+    private void LevelUp()
+    {
+        Instantiate(levelUpEffect);
+        
+    }
 
     private void Switch()
     {

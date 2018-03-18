@@ -1727,6 +1727,8 @@ MonoBehaviour:
   rayStart: {fileID: 2069687962}
   crystalEffect: {fileID: 1499472975598566, guid: 4e7e56f7a0a600544800947042cca04d,
     type: 2}
+  levelUpEffect: {fileID: 1499472975598566, guid: 0a0ce6a1bb6f32c47aae0ad2fd329a7a,
+    type: 2}
   destroyEffect: {fileID: 1499472975598566, guid: 51b594d8c55b7f2409dd07d20e9568d9,
     type: 2}
   runSpeed: 3
@@ -1882,7 +1884,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameStarted: 0
   score: 0
-  crystalScore: 3
   scoreText: {fileID: 1532224844}
   highscoreText: {fileID: 1067913983}
 --- !u!4 &1554167367
