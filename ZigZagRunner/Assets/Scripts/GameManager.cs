@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
 
     public Text scoreText;
     public Text highscoreText;
+	public Text levelText;
 
     private void Awake()
     {
@@ -77,6 +78,6 @@ public class GameManager : MonoBehaviour {
 
 	public void setCharacterLevel(int level)
 	{
-
+		levelText.text = level.ToString ();
 	}
 }

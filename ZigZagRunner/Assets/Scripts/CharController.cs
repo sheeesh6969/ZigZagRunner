@@ -90,11 +90,8 @@ public class CharController : MonoBehaviour {
 			if (islevelUp) {
 				//play effect
 				execLevelUpEffekt ();
-
-				//debug output for current level.
-				//TODO add a ui element to display the current level
-				//gameManager.increaseEp
-				Debug.Log (levelUpSystem.getCurrentLevel());
+				//update ui
+				gameManager.setCharacterLevel(levelUpSystem.getCurrentLevel());
 			
 			}
 
