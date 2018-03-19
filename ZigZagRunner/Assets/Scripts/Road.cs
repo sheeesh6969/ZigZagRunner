@@ -12,7 +12,7 @@ public class Road : MonoBehaviour {
 
     public void StartBuilding()
     {
-        InvokeRepeating("CreateNewRoadPart", .1f, .2f);
+        InvokeRepeating("CreateNewRoadPart", .1f, .3f);
     }
 
     public void CreateNewRoadPart()
