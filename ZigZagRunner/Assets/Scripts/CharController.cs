@@ -139,7 +139,7 @@ public class CharController : MonoBehaviour {
         {
             GameObject g = Instantiate(destroyEffect, other.transform.position, Quaternion.identity);
             Destroy(other.transform.gameObject, 0.5f);
-            Destroy(g, 0.5f);
+            Destroy(g, 2.0f);
 
             lastRoadPathCollision = other.transform.gameObject;
         }
