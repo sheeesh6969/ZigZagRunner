@@ -1793,6 +1793,18 @@ Prefab:
       propertyPath: m_Radius
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 114143633739445578, guid: fc99e1cf369e15742b2763b24e85554c,
+        type: 2}
+      propertyPath: toxicCrystalEffect
+      value: 
+      objectReference: {fileID: 1499472975598566, guid: 9a48330b0765151499256eeb1ffb8940,
+        type: 2}
+    - target: {fileID: 114143633739445578, guid: fc99e1cf369e15742b2763b24e85554c,
+        type: 2}
+      propertyPath: preciousCrystalEffect
+      value: 
+      objectReference: {fileID: 1499472975598566, guid: 73215d737fdd47d45b8e9a06182af7c8,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc99e1cf369e15742b2763b24e85554c, type: 2}
   m_IsPrefabParent: 0
