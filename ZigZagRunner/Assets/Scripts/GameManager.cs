@@ -80,4 +80,14 @@ public class GameManager : MonoBehaviour {
 	{
 		levelText.text = "Du bist Level: " + level.ToString ();
 	}
+
+	public void SetStoredExperience(int experience)
+	{
+		PlayerPrefs.SetInt("PlayerExperience", experience);
+	}
+
+	public int GetStoredExperience()
+	{
+		return PlayerPrefs.GetInt("PlayerExperience");
+	}
 }

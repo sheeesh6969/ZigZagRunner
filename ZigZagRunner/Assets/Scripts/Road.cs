@@ -19,7 +19,7 @@ public class Road : MonoBehaviour {
     {
         Vector3 spawnPos = Vector3.zero;
 
-        float chance = Random.Range(0, 100);
+        int chance = Random.Range(0, 100);
         if (chance < 50)
             spawnPos = new Vector3(lastPos.x + offset, lastPos.y, lastPos.z + offset);
         else
@@ -37,25 +37,29 @@ public class Road : MonoBehaviour {
 			//cast crystal from road child
 			Crystal crystal = g.transform.GetChild (0).gameObject.GetComponent<Crystal> ();
 
-			//set different Crystal types **
-			//normal   crystal: 75%       **
-			//precious crystal: 14%		  **
-			//toxic    crystal: 11%       **
-			if (chance < 75) 
-			{
-				crystal.SetType (Crystal.Type.Normal);
-			} 
-			else if (chance >= 75 && chance < 90) 
-			{
-				crystal.SetType (Crystal.Type.Precious);
-			}
-			else if (chance >= 90) 
-			{
-				crystal.SetType (Crystal.Type.Toxic);
-			}
+			//set rendomly a specific crystal type via the parameter - rndNumber
+			setRandomCrystal (crystal, chance);
 
+			//make the crystal visible
 			crystal.gameObject.SetActive (true);
 		}
     }
+
+	//rndNumber have to be between 0 and 100
+	private void setRandomCrystal(Crystal crystal, int rndNumber)
+	{
+		if (rndNumber < 75) 
+		{
+			crystal.SetType (Crystal.Type.Normal);		// 75%
+		} 
+		else if (rndNumber >= 75 && rndNumber < 90) 
+		{
+			crystal.SetType (Crystal.Type.Precious);	// 14%
+		}
+		else if (rndNumber >= 90) 
+		{
+			crystal.SetType (Crystal.Type.Toxic);		// 11%
+		}
+	}
 
 }

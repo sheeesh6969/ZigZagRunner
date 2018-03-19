@@ -1374,8 +1374,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startLevel: 0
-  maxLevel: 20
-  maxEp: 1000
+  maxLevel: 20000
+  maxEp: 1000000
 --- !u!1 &1030668814
 GameObject:
   m_ObjectHideFlags: 0

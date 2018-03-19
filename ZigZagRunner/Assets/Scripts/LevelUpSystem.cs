@@ -5,11 +5,11 @@ using UnityEngine;
 public class LevelUpSystem : MonoBehaviour {
 
 	//the start Level
-	public int startLevel = 1; 
+	public int startLevel = 0; 
 	//the maximal level to reach
-	public int maxLevel = 10;
+	public int maxLevel = 20000;
 	//the maximum experience to reach the maximum level 
-	public int maxEp = 1000;
+	public int maxEp = 1000000;
 
 	//the currently available points of axperience
 	private int currentEp = 0;

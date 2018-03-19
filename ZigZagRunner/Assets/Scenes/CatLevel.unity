@@ -1813,8 +1813,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startLevel: 0
-  maxLevel: 20
-  maxEp: 1000
+  maxLevel: 20000
+  maxEp: 1000000
 --- !u!1001 &1450794646
 Prefab:
   m_ObjectHideFlags: 0

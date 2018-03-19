@@ -6,6 +6,8 @@ public class CharController : MonoBehaviour {
 
     public Transform rayStart;
     public GameObject crystalEffect;
+	public GameObject preciousCrystalEffect;	//TODO CREATE CRYSTAL PRECIOUS PARTICLE EFFECT
+	public GameObject toxicCrystalEffect;		//TODO CREATE CRYSTAL TOXIC PARTICLE EFFECT
     public GameObject levelUpEffect;
     public GameObject destroyEffect;
     public int runSpeed;
@@ -22,6 +24,11 @@ public class CharController : MonoBehaviour {
 		levelUpSystem = GetComponent<LevelUpSystem>();
         gameManager = FindObjectOfType<GameManager>();
 		gameManager.setCharacterLevel (levelUpSystem.getCurrentLevel());
+
+		//set experience
+		levelUpSystem.addEp(gameManager.GetStoredExperience()); 
+		//set level
+		gameManager.setCharacterLevel(levelUpSystem.getCurrentLevel());
     }
 
     void FixedUpdate () {
@@ -83,20 +90,15 @@ public class CharController : MonoBehaviour {
         {
 			Crystal crystal = other.transform.GetComponent<Crystal> ();
 
-			//check is toxic Crystal
-			if (crystal.GetCrystalType() == Crystal.Type.Toxic) 
-			{
-				//debuff
-				runSpeed = 4;
-				//after 2sec, the running speed is reset
-				Invoke ("resetRunSpeed", 2.0f);
-			}
-
 			//increase Score
 			gameManager.IncreaseScore(crystal.GetValue());
 
 			//simple levelUpSystem: add ep
 			bool islevelUp = levelUpSystem.addEp(crystal.GetValue());
+
+			//store ep on disk
+			int currentEp = levelUpSystem.getCurrentEp();
+			gameManager.SetStoredExperience (currentEp);
 
 			//if level up
 			if (islevelUp) {
@@ -107,10 +109,25 @@ public class CharController : MonoBehaviour {
 			
 			}
 
-            //Spawn Crystal effect
-            GameObject g = Instantiate(crystalEffect, other.transform.position, Quaternion.identity);
-            Destroy(g, 2);
+			switch (crystal.GetCrystalType())
+			{
+			case Crystal.Type.Normal:
+				execParticleffekt (crystalEffect, other.transform.position, 2.0f);
+				break;
+			case Crystal.Type.Precious:
+				execParticleffekt (preciousCrystalEffect, other.transform.position, 2.0f);
+				break;
+				//toxic Crystal
+			case Crystal.Type.Toxic:
+				//debuff
+				runSpeed = 4;
+				//after 2sec, the running speed is reset
+				Invoke ("resetRunSpeed", 2.0f);
+				execParticleffekt (toxicCrystalEffect, other.transform.position, 2.0f);
+				break;
+			}
 
+			//zerstört Kristall
             Destroy(other.gameObject);
         }
     }
@@ -139,6 +156,15 @@ public class CharController : MonoBehaviour {
 		v3.y += 1.0f;
 		GameObject lvlupeffect = Instantiate(levelUpEffect, v3, Quaternion.identity);
 		Destroy(lvlupeffect, 2.0f);
+	}
+
+	private void execParticleffekt (GameObject effect, Vector3 pos, float destroyInSec)
+	{
+		if (effect == null) return;
+
+		//Spawn Crystal effect
+		GameObject tmp_effect = Instantiate(effect, pos, Quaternion.identity);
+		Destroy(tmp_effect, destroyInSec);
 	}
 
 	private void resetRunSpeed()
