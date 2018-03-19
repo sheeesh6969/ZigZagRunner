@@ -83,6 +83,15 @@ public class CharController : MonoBehaviour {
         {
 			Crystal crystal = other.transform.GetComponent<Crystal> ();
 
+			//check is toxic Crystal
+			if (crystal.GetCrystalType() == Crystal.Type.Toxic) 
+			{
+				//debuff
+				runSpeed = 4;
+				//after 2sec, the running speed is reset
+				Invoke ("resetRunSpeed", 2.0f);
+			}
+
 			//increase Score
 			gameManager.IncreaseScore(crystal.GetValue());
 
@@ -130,6 +139,11 @@ public class CharController : MonoBehaviour {
 		v3.y += 1.0f;
 		GameObject lvlupeffect = Instantiate(levelUpEffect, v3, Quaternion.identity);
 		Destroy(lvlupeffect, 2.0f);
+	}
+
+	private void resetRunSpeed()
+	{
+		runSpeed = 3;
 	}
 
 }
