@@ -32,8 +32,30 @@ public class Road : MonoBehaviour {
         //Enable the Crystal for every 5th road part
         roadCount++;
 
-        if (roadCount % 4 == 0)
-            g.transform.GetChild(0).gameObject.SetActive(true);
+		if (roadCount % 4 == 0) {
+
+			//cast crystal from road child
+			Crystal crystal = g.transform.GetChild (0).gameObject.GetComponent<Crystal> ();
+
+			//set different Crystal types **
+			//normal   crystal: 75%       **
+			//precious crystal: 14%		  **
+			//toxic    crystal: 11%       **
+			if (chance < 75) 
+			{
+				crystal.SetType (Crystal.Type.Normal);
+			} 
+			else if (chance >= 75 && chance < 90) 
+			{
+				crystal.SetType (Crystal.Type.Precious);
+			}
+			else if (chance >= 90) 
+			{
+				crystal.SetType (Crystal.Type.Toxic);
+			}
+
+			crystal.gameObject.SetActive (true);
+		}
     }
 
 }

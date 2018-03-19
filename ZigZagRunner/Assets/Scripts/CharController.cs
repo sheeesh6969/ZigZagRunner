@@ -81,11 +81,13 @@ public class CharController : MonoBehaviour {
     {
         if(other.tag == "Crystal")
         {
+			Crystal crystal = other.transform.GetComponent<Crystal> ();
+
 			//increase Score
-            gameManager.IncreaseScore(4);
+			gameManager.IncreaseScore(crystal.GetValue());
 
 			//simple levelUpSystem: add ep
-			bool islevelUp = levelUpSystem.addEp(4);
+			bool islevelUp = levelUpSystem.addEp(crystal.GetValue());
 
 			//if level up
 			if (islevelUp) {

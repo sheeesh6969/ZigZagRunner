@@ -22,9 +22,9 @@ public class LevelUpSystem : MonoBehaviour {
 
 	public bool addEp(int ep)
 	{
-		// if the experience(ep) invalid dont add ep
-		if (ep < 0)  
-			return false;
+		// if the experience(ep) negative dont add ep
+//		if (ep < 0)  
+//			return false;
 		 
 		//if max level is reached dont add ep
 		if(currentLevel == maxLevel) 

@@ -776,6 +776,10 @@ Prefab:
       propertyPath: m_Name
       value: RoadPart (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000749501013508, guid: fedbead93d5ffa043bb696303dd6eab7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fedbead93d5ffa043bb696303dd6eab7, type: 2}
   m_IsPrefabParent: 0
@@ -951,6 +955,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4330455525331218, guid: fedbead93d5ffa043bb696303dd6eab7, type: 2}
       propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000749501013508, guid: fedbead93d5ffa043bb696303dd6eab7, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2045,6 +2053,10 @@ Prefab:
     - target: {fileID: 1085279015530880, guid: fedbead93d5ffa043bb696303dd6eab7, type: 2}
       propertyPath: m_Name
       value: RoadPart (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000749501013508, guid: fedbead93d5ffa043bb696303dd6eab7, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fedbead93d5ffa043bb696303dd6eab7, type: 2}
