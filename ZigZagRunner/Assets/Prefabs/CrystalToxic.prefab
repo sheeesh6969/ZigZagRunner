@@ -24,12 +24,15 @@ GameObject:
   - component: {fileID: 65204459061978328}
   - component: {fileID: 114355098988279100}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 199276916565850344}
   - component: {fileID: 198998440223000962}
 =======
   - component: {fileID: 198963525357674876}
   - component: {fileID: 199736790042878358}
 >>>>>>> e5be1b2857ef0809b397baa5b6a07801e0fb59c5
+=======
+>>>>>>> 6677d4a497ef881941579b20f134027a37f36666
   m_Layer: 0
   m_Name: CrystalToxic
   m_TagString: Crystal
@@ -117,6 +120,7 @@ MonoBehaviour:
   value: -10
   destroyEffect: {fileID: 1499472975598566, guid: 9a48330b0765151499256eeb1ffb8940,
     type: 2}
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!198 &198998440223000962
 =======
@@ -3657,3 +3661,5 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+=======
+>>>>>>> 6677d4a497ef881941579b20f134027a37f36666
