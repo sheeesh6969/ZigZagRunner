@@ -5,9 +5,6 @@ using UnityEngine;
 public class CharController : MonoBehaviour {
 
     public Transform rayStart;
-    public GameObject crystalEffect;
-	public GameObject preciousCrystalEffect;	//TODO CREATE CRYSTAL PRECIOUS PARTICLE EFFECT
-	public GameObject toxicCrystalEffect;		//TODO CREATE CRYSTAL TOXIC PARTICLE EFFECT
     public GameObject levelUpEffect;
     public GameObject destroyEffect;
     public int runSpeed;
@@ -96,46 +93,37 @@ public class CharController : MonoBehaviour {
 			//simple levelUpSystem: add ep
 			bool islevelUp = levelUpSystem.addEp(crystal.GetValue());
 
-			//store ep on disk
-			int currentEp = levelUpSystem.getCurrentEp();
-			gameManager.SetStoredExperience (currentEp);
-
 			//if level up
 			if (islevelUp) {
-				//play effect
 				execLevelUpEffekt ();
 				//update ui
 				gameManager.setCharacterLevel(levelUpSystem.getCurrentLevel());
-			
 			}
 
-			switch (crystal.GetCrystalType())
-			{
-			case Crystal.Type.Normal:
-				execParticleffekt (crystalEffect, other.transform.position, 2.0f);
-				break;
-			case Crystal.Type.Precious:
-				execParticleffekt (preciousCrystalEffect, other.transform.position, 2.0f);
-				break;
-				//toxic Crystal
-			case Crystal.Type.Toxic:
-				//debuff
+			//store ep(level) on disk
+			int currentEp = levelUpSystem.getCurrentEp();
+			gameManager.SetStoredExperience (currentEp);
+
+			//debuff
+			if (crystal.GetValue () < 0) {
 				runSpeed = 4;
 				//after 2sec, the running speed is reset
 				Invoke ("resetRunSpeed", 2.0f);
-				execParticleffekt (toxicCrystalEffect, other.transform.position, 2.0f);
-				break;
 			}
 
 			//zerstört Kristall
-            Destroy(other.gameObject);
+			crystal.DestroyWithEffect();
         }
     }
     private GameObject lastRoadPathCollision = null;
 
     private void OnCollisionStay(Collision other)
     {
-        if (gameManager.gameStarted && other.transform.gameObject != lastRoadPathCollision && isFalling() == false)
+		//if the block has spotted in the past - return - 
+		if (other.transform.gameObject == lastRoadPathCollision)
+			return;
+
+        if (gameManager.gameStarted && !isFalling())
         {
             GameObject g = Instantiate(destroyEffect, other.transform.position, Quaternion.identity);
             Destroy(other.transform.gameObject, 0.5f);

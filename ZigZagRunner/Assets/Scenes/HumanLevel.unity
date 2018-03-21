@@ -201,6 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 151190766}
   - component: {fileID: 151190765}
+  - component: {fileID: 151190767}
   m_Layer: 0
   m_Name: Road
   m_TagString: Untagged
@@ -246,6 +247,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!114 &151190767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 151190764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f906f8b1489e9c4f9c2d26c3ace96fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  total: 100
+  objectGenerationEntrys:
+  - SpawnObject: {fileID: 1984294587820160, guid: ad639d30fb60f6b47990bfe3cb44ac86,
+      type: 2}
+    chance: 75
+  - SpawnObject: {fileID: 1984294587820160, guid: cd9240e0bf37aa1418a53d4403c7f356,
+      type: 2}
+    chance: 14
+  - SpawnObject: {fileID: 1984294587820160, guid: b46dbc3b6e4b2de4580bf8a31fca1fa7,
+      type: 2}
+    chance: 11
 --- !u!1 &259956950
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,13 +22,14 @@ GameObject:
   - component: {fileID: 33020620647073894}
   - component: {fileID: 23510713392104250}
   - component: {fileID: 65204459061978328}
+  - component: {fileID: 114626551188462022}
   m_Layer: 0
-  m_Name: Crystal
+  m_Name: CrystalNormal
   m_TagString: Crystal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4269358999498472
 Transform:
   m_ObjectHideFlags: 1
@@ -95,3 +96,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.05145663, y: 0.05184012, z: 0.037308287}
   m_Center: {x: -0.0055656256, y: 0.02346941, z: 0.013663684}
+--- !u!114 &114626551188462022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1984294587820160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b58f10f2b7de46644a147f2992330475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 4
+  destroyEffect: {fileID: 1499472975598566, guid: 4e7e56f7a0a600544800947042cca04d,
+    type: 2}
