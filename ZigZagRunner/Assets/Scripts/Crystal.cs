@@ -7,6 +7,12 @@ public class Crystal : MonoBehaviour {
 	[SerializeField]
 	private int value;
 	public GameObject destroyEffect;
+	public GameObject glowEffect;
+
+	private void Awake() 
+	{
+		Instantiate(glowEffect, this.transform.position, Quaternion.identity, this.transform);
+	}
 
 	public int GetValue()
 	{
