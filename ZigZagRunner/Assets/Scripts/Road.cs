@@ -37,47 +37,14 @@ public class Road : MonoBehaviour {
         //Enable the Crystal for every 5th road part
         roadCount++;
 
-
-
-//		GameObject a = rndSinObjGen.getRandomObject ();
-//		Vector3 v3 = new Vector3(spawnPos.x, spawnPos.y+(g.transform.localScale.y/2), spawnPos.z);
-//		GameObject o = Instantiate(a, v3, Quaternion.Euler(0, 45, 0));
-//		o.SetActive (false);
-
-
+		//spawn random crystal
 		if (roadCount % 4 == 0) {
 
 			GameObject a = rndSinObjGen.getRandomObject ();
 			Vector3 v3 = new Vector3(spawnPos.x, spawnPos.y+(g.transform.localScale.y/2), spawnPos.z);
-			GameObject o = Instantiate(a, v3, Quaternion.Euler(0, 45, 0));
-			o.transform.SetParent (g.transform);
-
-//			//cast crystal from road child
-//			CrystalOld crystal = g.transform.GetChild (0).gameObject.GetComponent<CrystalOld> ();
-//
-//			//set rendomly a specific crystal type via the parameter - rndNumber
-//			setRandomCrystal (crystal, chance);
-//
-//			//make the crystal visible
-//			crystal.gameObject.SetActive (true);
+			//g.setTopObject(
+			Instantiate(a, v3, Quaternion.Euler(0, 135, 0), g.transform);
+			//)
 		}
     }
-
-	//rndNumber have to be between 0 and 100
-	private void setRandomCrystal(CrystalOld crystal, int rndNumber)
-	{
-		if (rndNumber < 75) 
-		{
-			crystal.SetType (CrystalOld.Type.Normal);		// 75%
-		} 
-		else if (rndNumber >= 75 && rndNumber < 90) 
-		{
-			crystal.SetType (CrystalOld.Type.Precious);	// 14%
-		}
-		else if (rndNumber >= 90) 
-		{
-			crystal.SetType (CrystalOld.Type.Toxic);		// 11%
-		}
-	}
-
 }
