@@ -1725,12 +1725,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayStart: {fileID: 2069687962}
-  crystalEffect: {fileID: 1499472975598566, guid: 4e7e56f7a0a600544800947042cca04d,
-    type: 2}
-  preciousCrystalEffect: {fileID: 1499472975598566, guid: 73215d737fdd47d45b8e9a06182af7c8,
-    type: 2}
-  toxicCrystalEffect: {fileID: 1499472975598566, guid: 9a48330b0765151499256eeb1ffb8940,
-    type: 2}
   levelUpEffect: {fileID: 1499472975598566, guid: db101de8119347143969286da3d1cd1f,
     type: 2}
   destroyEffect: {fileID: 1499472975598566, guid: 51b594d8c55b7f2409dd07d20e9568d9,
@@ -1978,6 +1972,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1679268964}
   - component: {fileID: 1679268965}
+  - component: {fileID: 1679268966}
   m_Layer: 0
   m_Name: Road
   m_TagString: Untagged
@@ -2023,6 +2018,28 @@ MonoBehaviour:
   roadPrefab: {fileID: 1085279015530880, guid: 1610ca69b28a0d04a8a5c53d3b31a175, type: 2}
   offset: 0.707
   lastPos: {x: 0, y: 0, z: 7.071068}
+--- !u!114 &1679268966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1679268963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f906f8b1489e9c4f9c2d26c3ace96fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  total: 100
+  objectGenerationEntrys:
+  - SpawnObject: {fileID: 1984294587820160, guid: ad639d30fb60f6b47990bfe3cb44ac86,
+      type: 2}
+    chance: 75
+  - SpawnObject: {fileID: 1984294587820160, guid: cd9240e0bf37aa1418a53d4403c7f356,
+      type: 2}
+    chance: 14
+  - SpawnObject: {fileID: 1984294587820160, guid: b46dbc3b6e4b2de4580bf8a31fca1fa7,
+      type: 2}
+    chance: 11
 --- !u!4 &1679334005 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4330455525331218, guid: fedbead93d5ffa043bb696303dd6eab7,
