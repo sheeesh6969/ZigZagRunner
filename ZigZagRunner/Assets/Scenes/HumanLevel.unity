@@ -262,13 +262,13 @@ MonoBehaviour:
   objectGenerationEntrys:
   - SpawnObject: {fileID: 1984294587820160, guid: ad639d30fb60f6b47990bfe3cb44ac86,
       type: 2}
-    chance: 75
+    chance: 10
   - SpawnObject: {fileID: 1984294587820160, guid: cd9240e0bf37aa1418a53d4403c7f356,
       type: 2}
     chance: 14
   - SpawnObject: {fileID: 1984294587820160, guid: b46dbc3b6e4b2de4580bf8a31fca1fa7,
       type: 2}
-    chance: 11
+    chance: 76
 --- !u!1 &259956950
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,7 +448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50.559998, y: -16.670044}
+  m_AnchoredPosition: {x: -50.56006, y: -16.670044}
   m_SizeDelta: {x: 90, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &333141866
@@ -1829,7 +1829,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.5
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
