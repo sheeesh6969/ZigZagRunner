@@ -18,5 +18,4 @@ public class BackgroundLoop : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
 
     }
-
 }
