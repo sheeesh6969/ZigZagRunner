@@ -126,7 +126,18 @@ public class CharController : MonoBehaviour {
         if (gameManager.gameStarted && !isFalling())
         {
             GameObject g = Instantiate(destroyEffect, other.transform.position, Quaternion.identity);
-            Destroy(other.transform.gameObject, 0.5f);
+
+			//for performance, the FallDown component and its update method was disabled.
+			//now we enable it. //maybe, a internal controller is a mutch better way for this. fuck off. :D
+			other.gameObject.GetComponent<FallDown>().enabled = true;
+
+			//drops the block after its internal delay.
+			other.gameObject.GetComponent<FallDown>().startFallDown();
+
+			//destroy the block
+            Destroy(other.transform.gameObject, 2.5f);
+
+			//destroy the particle effect
             Destroy(g, 2.0f);
 
             lastRoadPathCollision = other.transform.gameObject;
@@ -146,7 +157,7 @@ public class CharController : MonoBehaviour {
 		Destroy(lvlupeffect, 2.0f);
 	}
 
-	private void execParticleffekt (GameObject effect, Vector3 pos, float destroyInSec)
+	private void execParticleffect (GameObject effect, Vector3 pos, float destroyInSec)
 	{
 		if (effect == null) return;
 

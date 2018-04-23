@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 33812279225087386}
   - component: {fileID: 65763233215876306}
   - component: {fileID: 23802503422824692}
+  - component: {fileID: 114913098750878474}
   m_Layer: 0
   m_Name: RoadPart
   m_TagString: Untagged
@@ -192,4 +193,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0fe49f53de2f024c88be7fe0db592fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 4
+--- !u!114 &114913098750878474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1085279015530880}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5609669341812034aa2a8cfe6a37bf20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.25
+  range: 10
+  delay: 0.35
