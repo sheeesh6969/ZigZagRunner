@@ -119,6 +119,8 @@ public class CharController : MonoBehaviour {
 
     private void OnCollisionStay(Collision other)
     {
+		//TODO HAVE TO CHANGE.. Der roadBlock darf erst fallen, wenn der Charackter diesen nicht mehr berührt.
+
 		//if the block has spotted in the past - return - 
 		if (other.transform.gameObject == lastRoadPathCollision)
 			return;

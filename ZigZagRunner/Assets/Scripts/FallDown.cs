@@ -9,6 +9,7 @@ public class FallDown : MonoBehaviour {
 	public float delay = 1.0f;
 
 	private bool falling = false;
+	private bool falldownStarted = false;
 	private Vector3 endPosition = new Vector3 ();
 	
 	// Update is called once per frame
@@ -18,8 +19,14 @@ public class FallDown : MonoBehaviour {
 		}
 	}
 
+	public bool isFalling()
+	{
+		return falldownStarted;
+	}
+
 	public void startFallDown()
 	{
+		falldownStarted = true;
 		Invoke ("startFallDown_p", delay);
 	}
 
